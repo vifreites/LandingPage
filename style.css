@@ -9,7 +9,8 @@
 
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+    background: linear-gradient(to bottom, #FF8C8C, #E5BA73)
+  }
 
 nav {
     display: flex;
@@ -17,6 +18,10 @@ nav {
     align-items: center;
     background-color: #C58940;
     padding: 1rem ;
+}
+
+.nav-links{
+  text-size-adjust: medium;
 }
 
 .logo{
@@ -27,6 +32,7 @@ nav {
 header{
     justify-content: space-between;
     background-color: #C58940;
+    display: flex;
 }
 
 ul a {
@@ -47,17 +53,18 @@ ul{
     border-radius: 15%;
 }
 main{
-    background: var(--background);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  text-size-adjust: medium;
   background-color: #E5BA73;
-  width: 100%;
-}
+  background: linear-gradient(to bottom, #E5BA73, #FF8C8C)
+  }
+
 #hero{
-    margin-top: 65px;
+  margin-top: 65px;
   padding: 70px 0;
   max-width: 1200px;
   display: flex;
@@ -71,7 +78,7 @@ main{
   width: 50%;
 }
 .hero_info h1{
-    font-size: 48px;
+  font-size: 48px;
   width: 80%;
   min-width: 500px; 
   font-weight: 800;
@@ -85,7 +92,7 @@ main{
 .hero_button{
     background-color: #FAEAB1;
     text-align: center;
-    font-size: 16px;
+    font-size: 25px;
     color: #C58940;
     padding: 0%;
     border-radius: 15px;
@@ -97,14 +104,38 @@ main{
     margin: 0%;
     box-sizing: border-box;
   }
-.card_logo{
-    width: 300px;
-    height: 300px;
-  background: #E5BA73;
-  padding: 20px;
+.card_hero{
+  width: 300px;
+  height: 300px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
 }
+.card_logo{
+  width: 300px;
+  height: 300px;
+  padding: 0;
+  background-position: center;
+  border-radius: 15px;
+  flex-direction: row;
+}
+.card_hero_info{
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  
+}
+
+#card_hero_info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+
+}
+
