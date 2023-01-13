@@ -8,18 +8,33 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: linear-gradient(to bottom, #FF8C8C, #E5BA73)
   }
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #C58940;
-    padding: 1rem ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #C58940;
+  padding: 1rem ;
 }
-
+.navbar{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar i{
+font-size: 36px;
+ display: none;
+}
+#toggle_menu{
+  display: none;
+}
 .nav-links{
   text-size-adjust: 14px;
 }
@@ -30,14 +45,26 @@ nav {
     height: 50px;
     background-color: #C58940;
 }
-header{
-    justify-content: space-between;
-    background-color: #C58940;
-    display: flex;
+/* header */
+
+.header{
+justify-content: space-between;
+background-color: #C58940;
+display: flex;
+height:80px;
+width: 100%;
+display: flex;
+align-items: center;
+padding: 0px 50px;
+position: fixed;
+top: 0;
+z-index: 1;
+justify-content: space-between;
 }
 
 ul a {
     color:black;
+    font-size: 22px;
     text-decoration: none;
 }
 img { float: left; 
@@ -67,14 +94,41 @@ main{
   background-color: #E5BA73;
   background: linear-gradient(to bottom, #E5BA73, #FF8C8C)
   }
+  @media (max-width: 992px) {
+    .hero_info{
+      text-align: center;
+      width: 80%;
+      text-align: center;
+    }
+    .hero_info h1{
+      display: block;
+      width: 100%;
+    }
+    .hero_info p{
+      max-width: 80%;
+      font-size: 12px;
+      text-align: center;
+
+    }
+    .hero_button{
+      justify-content: center;
+    }
+    .card_logo {
+      display: none;
+    }
+  }
 
 #hero{
-  margin-top: 65px;
+  margin-top: 80px;
   padding: 70px 0;
   max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-box-shadow: 0px 5px 20px 0px rgb(77 76 76 / 54%);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(75, 74, 74, 0.54);
+  box-shadow: 0px 5px 20px 0px rgb(46 46 46 / 54%);
+  border-radius: 15px;
 }
 .hero_info{
     display: flex;
@@ -93,6 +147,7 @@ main{
     font-size: 22px;
     width: 70%;
     color: aliceblue;
+    text-align: justify;
   }
 .hero_button{
     background-color: #FAEAB1;
@@ -127,12 +182,13 @@ main{
   flex-direction: row;
 }
 .card_hero_info{
-  
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  text-align: justify;
   
 }
 .card_hero_info p{
@@ -145,9 +201,10 @@ main{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  padding: 70px;
 }
 #card_hero_info h2{
   font-size: 32px;
@@ -155,12 +212,13 @@ main{
 }
 #info {
   padding: 70px 0;
-  max-width: 1200px;
+  width 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 80px;
+  
 }
 #info h2{
   font-size: 32px;
@@ -173,11 +231,11 @@ main{
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
-
+  
 }
 
 .info_card{
-  width: 300px;
+  width: 500px;
   height: 290px;
   padding: 40px 30px;
   display: flex;
@@ -187,6 +245,9 @@ main{
   background: #C58940;
   border-radius: 10px;
   gap: 20px;
+  -webkit-box-shadow: 0px 5px 20px 0px rgb(77 76 76 / 54%);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(75, 74, 74, 0.54);
+  box-shadow: 0px 5px 20px 0px rgb(46 46 46 / 54%);
 }
 
 .info_card h3 {
@@ -201,8 +262,16 @@ main{
   text-align: center;
 }
 
+#contacto{
+  display: flex;
+  padding: 50px;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
 footer {
-  background-color: #E5BA73;
+  background: linear-gradient(to bottom, #C58940 #E5BA73)  ;
   color: black;
 }
 
@@ -218,13 +287,15 @@ footer h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 200px;
+  gap: 100px;
   padding-bottom: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .footer__container img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -246,5 +317,14 @@ footer h2 {
   display: flex;
   align-items: center;
   gap: 9px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
+  font-size: 20px;
+}
+.footer{
+  background-color: black;
+  color: aliceblue;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 20px;
 }
