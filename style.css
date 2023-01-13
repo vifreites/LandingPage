@@ -1,10 +1,10 @@
 *{
-    margin: 0;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 body{
@@ -21,12 +21,13 @@ nav {
 }
 
 .nav-links{
-  text-size-adjust: medium;
+  text-size-adjust: 14px;
 }
 
 .logo{
+    display: flex;
     width: 3rem;
-    height: 40%;
+    height: 50px;
     background-color: #C58940;
 }
 header{
@@ -39,7 +40,11 @@ ul a {
     color:black;
     text-decoration: none;
 }
-img { float: left; width: 8em; height: 8em; margin-right: 1em; }
+img { float: left; 
+      width: 8em; 
+      height: 8em; 
+      margin-right: 1em; 
+    }
 
 ul{
     list-style: none;
@@ -82,12 +87,12 @@ main{
   width: 80%;
   min-width: 500px; 
   font-weight: 800;
-  color: var(--text-white);
+  color:aliceblue;
 }
 .hero_info p {
-    font-size: 14px;
+    font-size: 22px;
     width: 70%;
-    color: var(--text-gray);
+    color: aliceblue;
   }
 .hero_button{
     background-color: #FAEAB1;
@@ -122,7 +127,7 @@ main{
   flex-direction: row;
 }
 .card_hero_info{
-  background: var(--background);
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,12 +135,116 @@ main{
   color: white;
   
 }
+.card_hero_info p{
+    font-size: 25px;
+    width: 70%;
+    color:aliceblue;
+}
 
 #card_hero_info{
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#card_hero_info h2{
+  font-size: 32px;
+  font-weight: 800;
+}
+#info {
+  padding: 70px 0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+#info h2{
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.info_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
 
 }
 
+.info_card{
+  width: 300px;
+  height: 290px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #C58940;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.info_card h3 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.info_card p {
+  font-size: 18px;
+  font-weight: 300;
+  color: aliceblue;
+  text-align: center;
+}
+
+footer {
+  background-color: #E5BA73;
+  color: black;
+}
+
+footer h2 {
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 200px;
+  padding-bottom: 30px;
+}
+
+.footer__container img {
+  width: 30px;
+  height: 30px;
+}
+
+
+.footer__container .redes {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer__container .redes img:hover {
+  background-color: #C58940;
+  border: none;
+  border-radius: 20px;
+}
+
+.adress,
+.mail, 
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 20px;
+}
